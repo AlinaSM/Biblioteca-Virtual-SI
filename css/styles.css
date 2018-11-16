@@ -1,0 +1,23 @@
+:root {
+    --main-color: #233D7B;
+    --second-color: #3757a1; 
+}
+
+.logo-hd{
+    width: 100px;
+    border: 1px none;
+}
+
+.title-hd{
+    background-color: var(--main-color);
+    padding: .5%;
+    color: whitesmoke;
+}
+
+.cont-hd{
+    padding: 1%;
+}
+
+.sc-color{
+    color: var(--second-color);
+}

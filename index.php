@@ -2,7 +2,12 @@
 require_once('app/Controllers/Autoload.php');
 $autoload = new Autoload();
 
-$route =  isset($_GET['r']) ? 'login' : $_GET['r'] ;
-$gro_cultural = new Router( $route );
+
+if(isset($_GET['t'])){
+    $route =  isset($_GET['r']) ? 'login' : $_GET['r'] ;
+    $page = new Router( $route );
+}else{
+    header('Location: page/login');
+}
 
 ?>
