@@ -9,14 +9,7 @@ class Autoload{
             if( file_exists($controllers_path) )  require_once($controllers_path);
             if( file_exists($models_path) )  require_once($models_path);
         });
-
-        
     }
-
-    public function __destruct(){
-
-    }
-
 }
 
 ?>
