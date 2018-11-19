@@ -18,7 +18,7 @@ class UsuariosModel extends Model{
         }
 
         $this->query = "INSERT INTO usuarios(id, alias, nombre, apellidos, fecha_nac, contrasena, email, tipo) 
-                        VALUES ($id, '$alias', '$nombre', '$apellidos', '$fecha_nac', '$contrasena', '$email', '$tipo')";
+                        VALUES ($id, '$alias', '$nombre', '$apellidos', '$fecha_nac', MD5('$contrasena'), '$email', '$tipo')";
 
         $this->setQuery();
     }
@@ -40,7 +40,7 @@ class UsuariosModel extends Model{
 
         $this->query = "UPDATE usuarios SET id = $id, alias = '$alias', 
                         nombre = '$nombre', apellidos = '$apellidos', fecha_nac = '$fecha_nac', 
-                        contrasena = '$contrasena', email = '$email', tipo = '$tipo' WHERE id = $id";
+                        contrasena = MD5('$contrasena'), email = '$email', tipo = '$tipo' WHERE id = $id";
 
         $this->setQuery();
     }
@@ -51,9 +51,17 @@ class UsuariosModel extends Model{
     }
 
     public function validate( $username = '', $password = '' ){
-        $this->query =  "SELECT * FROM usuarios WHERE alias = '$username' AND contrasena = '$password';";
+        $this->query =  "SELECT * FROM usuarios WHERE alias = '$username' AND contrasena = MD5('$password');";
         $this->getQuery();
-        return $this->rows;
+
+        $data = array();
+        
+		foreach ($this->rows as $key => $value) {
+			array_push($data, $value);
+		}
+		return $data;
+
+        
     }
 
 }

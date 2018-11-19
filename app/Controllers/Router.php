@@ -32,6 +32,7 @@ class Router{
                     else if ( $_POST['r'] == 'del-user') $frm->loadView('del-user');
                     else if ( $_POST['r'] == 'upd-user') $frm->loadView('upd-user');
                     else if ( $_POST['r'] == 'inf-user') $frm->loadView('inf-user');
+                    //$lol = password_hash($_POST['password']  ,  PASSWORD_DEFAULT );
                     else if ( $_POST['r'] == 'validate-user' && $row = $userController->validate( $_POST['username'], $_POST['password'] )){
                         header('Location: successful-login');
                     }else{
