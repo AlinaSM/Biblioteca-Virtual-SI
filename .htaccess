@@ -6,4 +6,4 @@ RewriteBase /Biblioteca-Virtual-SI
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^page/(.*)$ index.php?t=page&r=$1 [L]
+RewriteRule ^page/(.*)$ index.php?t=page&p=$1 [L]

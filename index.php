@@ -4,7 +4,8 @@ $autoload = new Autoload();
 
 
 if(isset($_GET['t'])){
-    $route =  isset($_GET['r']) ? 'login' : $_GET['r'] ;
+    echo $_GET['p'];
+    $route =  !isset($_GET['p']) && $_GET['p'] == 'login'? 'login' : $_GET['p'] ;
     $page = new Router( $route );
 }else{
     header('Location: page/login');

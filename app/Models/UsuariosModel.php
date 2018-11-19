@@ -10,7 +10,6 @@ class UsuariosModel extends Model{
     private $email;
     private $tipo;
 
-    id, alias, nombre, apellidos, fecha_nac, contrasena, email, tipo
 
     public function create( $usuario_data = array() ){
         foreach($usuario_data as $key => $value){
@@ -25,8 +24,8 @@ class UsuariosModel extends Model{
     }
 
     public function read( $id_usuario ='' ){
-        $this->query = ( $id_usuario != '') 
-                        ? "SELECT * FROM usuarios WHERE id = $id;" 
+        $this->query =  $id_usuario != '' 
+                        ? "SELECT * FROM usuarios WHERE id = $id_usuario;" 
                         : "SELECT * FROM usuarios;";
         $this->getQuery();
 
@@ -51,5 +50,10 @@ class UsuariosModel extends Model{
         $this->setQuery();
     }
 
+    public function validate( $username = '', $password = '' ){
+        $this->query =  "SELECT * FROM usuarios WHERE alias = '$username' AND contrasena = '$password';";
+        $this->getQuery();
+        return $this->rows;
+    }
 
 }
