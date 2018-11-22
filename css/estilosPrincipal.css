@@ -1,0 +1,35 @@
+
+ #encabezado{
+      background: #233D7B;
+      height: 70px;
+      width: 110%;
+    }
+
+    #sidebar{
+      
+      height: 500px;
+      width: 100%;
+    }
+
+    #cajaizquierda{
+     
+      height: 700px;
+      width: 100%;
+    }
+
+    .barraDerecha{
+     
+      height: 500px;
+      width: 100%;
+    }
+
+    .caja{
+     
+      height: 140px;
+      margin: 20px 0 20px 0;
+     } 
+
+    .caja2{
+      background: firebrick;
+      height: 300px;
+    }
