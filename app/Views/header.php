@@ -1,7 +1,7 @@
 <header class="container-fluid">
     <div class="row title-hd">
         <div class="col-12">
-            <h4 class="text-center">Tecnológico Nacional de México</h4>
+            <h3 class="text-center">Tecnológico Nacional de México</h3>
         </div>
     </div>
     <div class="row cont-hd">

@@ -4,14 +4,19 @@
 }
 
 .logo-hd{
-    width: 70px;
+    height: 100px;
     border: 1px none;
 }
 
 .title-hd{
     background-color: var(--main-color);
-    padding: .5%;
+    padding: 1%;
     color: whitesmoke;
+   
+}
+
+h6{
+    font-size: 20px;
 }
 
 .cont-hd{

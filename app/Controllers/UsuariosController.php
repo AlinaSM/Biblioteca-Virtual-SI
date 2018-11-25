@@ -1,7 +1,5 @@
 <?php
 
-//require_once('../Models/UsuariosModel.php');
-
 class UsuariosController{
     private $model;
 
