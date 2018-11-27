@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Libro</title>
+	<meta charset="utf-8">
+
+	<!-- Boostrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- Estilos Propios -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<!-- Titulo -->
+	<header>
+		<div class="encabezado">
+			<div class="row ">
+				<div class="col-md-12" style="width: 100%;">
+					<div id="encabezado">
+						<center><h1><font color="white">Tecnológico Nacional de México</font></h1></center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Encabezado -->
+	<section id="encabezado">
+		<div class="row">
+			<div class="col-md-2">
+				<div>
+					<img src="img/TecNM.png" style="width: 100%;">
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				<center><h3><font color="#233D7B">Biblioteca virtual</font></h3></center>
+				<center><h3><font color="#233D7B">Instituto Tecnológico de Acapulco</font></h3></center>
+			</div>
+
+			<div class="col-md-2 my-auto">
+				<div>
+					<img src="img/ITA.png" style="width: 70%;">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- contenido Principal -->
+	<section>
+		<div class="container mt-5">
+			<div class="row">
+
+				<!-- Columna izquierda -->
+				<div class="col-md-3">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-header">
+					    <center><h5>Categorías</h5></center> 
+					  </div>
+					    <a class="dropdown-item" href="#">Arquitectura</a>
+  						<a class="dropdown-item" href="#">Ing. Sistemas</a>
+  						<a class="dropdown-item" href="#">Ing. Electromecánica</a>
+  						<a class="dropdown-item" href="#">Ing. Bioquímica</a>
+  						<a class="dropdown-item" href="#">Ing. Gestión Empresarial</a>
+  						<a class="dropdown-item" href="#">Lic. Administración</a>
+  						<a class="dropdown-item" href="#">Lic. Contador Publico</a>
+  						<a class="dropdown-item" href="#">Matemáticas</a>
+  						<a class="dropdown-item" href="#">Ingles</a>
+  						<a class="dropdown-item" href="#">Historia</a>
+  						<a class="dropdown-item" href="#">Lectura</a>
+  						<a class="dropdown-item" href="#">Infantil</a>
+					</div>
+				</div>
+
+				<!-- Columna Vista del Libro -->
+				<div class="col-md-7">
+					<div class="ml-2 card">
+						<embed src="libros/libro1.pdf" type="application/pdf" width="100%" height="600">
+						</embed>
+						<button type="button" class="btn btn-primary btn-lg">Pantalla completa</button>
+					</div>
+				</div>
+
+				<!-- Columna derecha -->
+				<div class="col-md-2">
+					<div>
+						<center><button type="button" class="btn btn-primary btn-lg">Salir</button></center> 
+					</div>
+
+					<br><br><br>
+					
+					<div>
+						<center><input type="text" placeholder="Nombre o Autor"></center> 
+						<br>
+						<center><button type="button" class="btn btn-primary btn-lg">Buscar</button></center>
+					</div>
+
+					<br><br>
+					
+					<div>
+						<img src="img/libros_digitales.png" style="width: 100%;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
