@@ -42,7 +42,10 @@ class Router{
                 case 'profile-user':
                     $frm->loadView('profile-user');
                 break;
-
+                
+                case 'ver-libro':
+                    $frm->loadView('ver-libro');
+                break;
                 
 
             }
