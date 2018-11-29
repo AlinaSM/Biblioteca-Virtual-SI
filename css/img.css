@@ -1,0 +1,18 @@
+h4{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+#blog.content{
+	display: flex;
+}
+
+#blog article{
+	margin: 10px; left: 10px;
+	
+}
+#blog section img{
+	width:20%;
+	max-width: 30%;
+	float: left;
+}

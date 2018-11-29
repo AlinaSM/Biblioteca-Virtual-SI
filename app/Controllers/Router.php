@@ -46,6 +46,10 @@ class Router{
                 case 'ver-libro':
                     $frm->loadView('ver-libro');
                 break;
+
+                case 'buscador':
+                    $frm->loadView('buscador');
+                break;
                 
 
             }
