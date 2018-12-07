@@ -17,7 +17,7 @@ abstract class Model{
     //Metodo privado para conectarno a la base de datos
     private function dbOpen(){
         try{
-            $this->cnn =  new PDO("mysql:host=localhost;dbname=dbBibliotecaVirtual","root","", self::$db_option_charset);
+            $this->cnn =  new PDO("mysql:host=localhost;dbname=dbbvsimple","root","", self::$db_option_charset);
             $this->cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }catch(Exception $e){
             echo "El error se produjo: ".$e->getLine();
@@ -32,6 +32,7 @@ abstract class Model{
 
     //Metodo que obtenga los datos de una consulta SELECT 
     protected function getQuery(){
+        //$rows = null;
         $this->dbOpen();
         $result = $this->cnn->query($this->query); //$this->query
         

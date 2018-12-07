@@ -19,7 +19,7 @@
     </div>
     
     <div class="row justify-content-center align-items-center float-right">
-        <input type="button" id="btnEntrarInvitado" value="Ingresar como invitado" class="btn btn-primary btnEntrar btnInv">
+        <a href="home" type="button" id="btnEntrarInvitado"  class="btn btn-primary btnEntrar btnInv">Ingresar como invitado</a>
     </div>
     
 </div>
