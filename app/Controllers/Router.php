@@ -49,7 +49,13 @@ class Router{
                 break;
                 
                 case 'ver-libro':
+                if(isset($_POST['idLibro'])){
+                    $idLibro = $_POST['idLibro'];
                     $frm->loadView('ver-libro');
+                 }else {
+                    //$frm->loadView('ver-libro');
+                 }
+                    
                 break;
 
                 case 'buscador':

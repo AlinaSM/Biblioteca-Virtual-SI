@@ -44,15 +44,18 @@ $categorias = $libros->readListadoCategorias();
 									if(isset($_POST['cat'])){
 										foreach( $libros->readByCategoria( $_POST['cat'] ) as $registro ){
 											echo "
-												<div class='col-3'>
-													<div class='card' style='width: 100%;'>
-														<img class='card-img-top' src='".$registro['dir_portada']." '>
-														<div class='card-body'>
-															<p class='card-title'>".$registro['titulo']."  </p>
-															<a href='".$registro['dir_pdf'] ."' class='btn btn-primary'>Leer</a>
-														</div>
+											<div class='col-3'>
+											<form action='ver-libro' method='post'>
+												<div class='card' style='width: 100%;'>
+													<img class='card-img-top' src='".$registro['dir_portada']." '>
+													<div class='card-body'>
+													<input type='hidden' name='idLibro' value='".$registro['id'] ."'>
+														<p class='card-title'>".$registro['titulo']."  </p>
+														<input type='submit' value='Leer'  class='btn btn-primary btn-lg'>
 													</div>
 												</div>
+												</form>
+											</div>
 												";
 											}
 									}else if( isset($_POST['valor']) ){
@@ -62,15 +65,21 @@ $categorias = $libros->readListadoCategorias();
 										}else{
 											foreach( $tupla as $registro ){
 												echo "
+												
 													<div class='col-3'>
+													<form action='ver-libro' method='post'>
 														<div class='card' style='width: 100%;'>
 															<img class='card-img-top' src='".$registro['dir_portada']." '>
 															<div class='card-body'>
+															<input type='hidden' name='idLibro' value='".$registro['id'] ."'>
 																<p class='card-title'>".$registro['titulo']."  </p>
-																<a href='".$registro['dir_pdf'] ."' class='btn btn-primary'>Leer</a>
+																
+																<input type='submit' value='Leer' class='btn btn-primary btn-lg'>
 															</div>
 														</div>
+														</form>
 													</div>
+													
 													";
 												}
 										}
@@ -89,29 +98,20 @@ $categorias = $libros->readListadoCategorias();
 				<!-- Columna derecha -->
 				<div class="col-md-2">
 					<div>
-						<center><button type="button" class="btn btn-primary btn-lg">Salir</button></center> 
+						<center>
+							<a class="btn btn-primary btn-lg" href="login">Salir</a>
+						</center> 
 					</div>
 
 					<br><br><br>
-					<form action='buscadorcategoria' method='POST'>
-						<input type="text" placeholder="Titulo del libro" name="valor" class="form-control">
-						<input type="submit" value="Buscar">
-					</form>
+					<center>
+                    <form action='buscadorcategoria' method='POST'>
+                            <input type="text" placeholder="Titulo del libro" name="valor" class="form-control m-2">
+                            <input type="submit" value="Buscar"  class="btn btn-primary btn-lg" class="form-control" >
+                    </form>
+                </center>
 					
-					<form action="buscadorcategoria" method="GET">
-
-						<div class="form-group">
-							<input type="text" placeholder="Titulo del libro" name="valor" class="form-control">
-						</div>
-
-						<div class="form-group">
-							<center>
-								<input type="submit"  class="btn btn-primary btn-lg" value="Buscar" class="form-control">
-							</center>
-						</div>
-							
-					</form>
-
+					
 					<br><br>
 					
 					<div>
