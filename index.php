@@ -2,6 +2,8 @@
 require_once('app/Controllers/Autoload.php');
 $autoload = new Autoload();
 
+//require_once('app/Views/login.php');
+
 
 if(isset($_GET['t'])){
     //echo $_GET['p'];

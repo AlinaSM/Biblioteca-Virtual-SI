@@ -39,6 +39,11 @@ class Router{
                     }
                 break;
 
+                case 'home':
+                    $frm->loadView('home');
+                break;
+
+
                 case 'profile-user':
                     $frm->loadView('profile-user');
                 break;
@@ -51,6 +56,17 @@ class Router{
                     $frm->loadView('buscador');
                 break;
                 
+                case 'buscadorcategoria':
+                    if(isset($_GET['valor'])){
+                        echo "Hola";
+                    } else if( !isset($_POST['cat']) ) $frm->loadView('buscadorcategoria');
+                    else if( $_POST['cat'] ){
+                        $frm->loadView('buscadorcategoria');
+                    }
+                     
+                    
+                break;
+
 
             }
 
