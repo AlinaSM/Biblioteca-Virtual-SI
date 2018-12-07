@@ -32,6 +32,7 @@ class LibrosModel extends Model{
     }
 */
     public function read(  $id = '' ){
+        $this->rows = null;
         $this->query =  $id != '' 
                         ? "SELECT * FROM libros WHERE id = $id;" 
                         : "SELECT * FROM libros;";

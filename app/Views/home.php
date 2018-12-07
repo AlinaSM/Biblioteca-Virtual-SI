@@ -165,14 +165,18 @@
             <div class="barraDerecha">
                 
                 <br>
-                <center><button type="button" class="btn btn-primary">Salir</button></center>
+                    <center>
+                        <a class="btn btn-primary btn-lg" href="login">Salir</a>
+                    </center> 
 
                 <br>
-                <center><input type="text" placeholder="Nombre o Autor"></center>
-
-                <br>
-                <center><button type="button" class="btn btn-primary">Buscar</button></center>
-                <br>
+                <center>
+                    <form action='buscadorcategoria' method='POST'>
+                            <input type="text" placeholder="Titulo del libro" name="valor" class="form-control m-2">
+                            <input type="submit" value="Buscar"  class="btn btn-primary btn-lg" class="form-control" >
+                    </form>
+                </center>
+                
                 <br>
                 <br>
 
